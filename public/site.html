@@ -33,66 +33,70 @@
         fill="none" stroke="currentColor" stroke-width="2"/>
     </svg>
 
-    <div class="wrap hero-inner">
-      <p class="eyebrow">PRE-MEDSCHOOL MENTORSHIP 2026 &nbsp;·&nbsp; ONLY 200 SLOTS</p>
-      <h1>Just got admitted<br>to a medical course?</h1>
-      <p class="hero-sub">Nursing, MBChB, Pharmacy, Clinical Medicine, Dental, Lab — any of them.<br>
-      Start med school already knowing the ropes.</p>
-
-      <div class="vitals" id="vitals" aria-live="polite">
-        <div class="vitals-row">
-          <span class="vitals-label">SLOTS REMAINING</span>
-          <span class="vitals-value" id="slots-remaining">—</span>
-        </div>
-        <div class="vitals-track">
-          <div class="vitals-fill" id="slots-fill"></div>
-        </div>
-        <div class="vitals-row small">
-          <span id="slots-filled">— filled</span>
-          <span>of 200 total</span>
-        </div>
+    <div class="wrap hero-inner hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">PRE-MEDSCHOOL MENTORSHIP 2026 &nbsp;·&nbsp; ONLY 200 SLOTS</p>
+        <h1>Just got admitted<br>to a medical course?</h1>
+        <p class="hero-sub">Nursing, MBChB, Pharmacy, Clinical Medicine, Dental, Lab — any of them.
+        Start med school already knowing the ropes.</p>
+        <a href="#register" class="btn btn-primary">Claim your spot</a>
       </div>
 
-      <a href="#register" class="btn btn-primary">Claim your spot</a>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="portrait-frame">
+          <span class="portrait-ring ring-a"></span>
+          <span class="portrait-ring ring-b"></span>
+          <svg class="portrait-art" viewBox="0 0 220 220">
+            <circle cx="110" cy="110" r="104" fill="#0F2B4D"/>
+            <circle cx="110" cy="110" r="104" fill="none" stroke="#C9A24B" stroke-width="2"/>
+            <path d="M60,190 C60,145 82,122 110,122 C138,122 160,145 160,190 Z" fill="#F7F5F0"/>
+            <circle cx="110" cy="86" r="34" fill="#0B1F3A"/>
+            <path d="M84,120 C84,140 96,150 110,150 C124,150 136,140 136,120" fill="none" stroke="#C9A24B" stroke-width="3" stroke-linecap="round"/>
+            <path d="M84,118 C74,118 68,126 68,136 C68,146 76,152 86,150" fill="none" stroke="#C9A24B" stroke-width="3" stroke-linecap="round"/>
+            <path d="M136,118 C146,118 152,126 152,136 C152,146 144,152 134,150" fill="none" stroke="#C9A24B" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="110" cy="155" r="7" fill="none" stroke="#C9A24B" stroke-width="3"/>
+          </svg>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- WHAT YOU GET -->
   <section class="section chart" id="programme">
     <div class="wrap">
-      <p class="eyebrow">WHAT'S IN THE PROGRAMME</p>
-      <h2>We pair every first-year with a senior who has walked the path.</h2>
+      <p class="eyebrow reveal">WHAT'S IN THE PROGRAMME</p>
+      <h2 class="reveal">We pair every first-year with a senior who has walked the path.</h2>
 
       <ul class="chart-list">
-        <li>
+        <li class="reveal">
           <span class="chart-check">✓</span>
           <div>
             <strong>A personal senior-student mentor</strong>
             <p>Someone who has already survived first year, in your corner from day one.</p>
           </div>
         </li>
-        <li>
+        <li class="reveal">
           <span class="chart-check">✓</span>
           <div>
             <strong>Daily WhatsApp group discussions</strong>
             <p>Ask anything, anytime — the group doesn't sleep on your questions.</p>
           </div>
         </li>
-        <li>
+        <li class="reveal">
           <span class="chart-check">✓</span>
           <div>
             <strong>Webinar series</strong>
             <p>Admission, study skills, campus safety, finances, relationships, career path, going abroad &amp; more.</p>
           </div>
         </li>
-        <li>
+        <li class="reveal">
           <span class="chart-check">✓</span>
           <div>
             <strong>Kahoot competitions with prizes</strong>
             <p>Learn the fun way, and win while you're at it.</p>
           </div>
         </li>
-        <li>
+        <li class="reveal">
           <span class="chart-check">✓</span>
           <div>
             <strong>A closing physical hike &amp; meetup</strong>
@@ -116,9 +120,23 @@
   <section class="section register" id="register">
     <div class="wrap register-inner">
       <div class="register-copy">
-        <p class="eyebrow">TWO STEPS TO JOIN</p>
-        <h2>Register below, then join the WhatsApp community.</h2>
-        <p class="hero-sub">200 slots. First come, first served. When they're gone, they're gone.</p>
+        <p class="eyebrow reveal">TWO STEPS TO JOIN</p>
+        <h2 class="reveal">Register below, then join the WhatsApp community.</h2>
+        <p class="hero-sub reveal">200 slots. First come, first served. When they're gone, they're gone.</p>
+      </div>
+
+      <div class="vitals reveal" id="vitals" aria-live="polite">
+        <div class="vitals-row">
+          <span class="vitals-label">SLOTS REMAINING</span>
+          <span class="vitals-value" id="slots-remaining">—</span>
+        </div>
+        <div class="vitals-track">
+          <div class="vitals-fill" id="slots-fill"></div>
+        </div>
+        <div class="vitals-row small">
+          <span id="slots-filled">— filled</span>
+          <span>of 200 total</span>
+        </div>
       </div>
 
       <form id="register-form" class="card" novalidate>
