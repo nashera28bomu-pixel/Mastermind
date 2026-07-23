@@ -1,0 +1,100 @@
+:root{
+  --navy: #0B1F3A;
+  --navy-deep: #071527;
+  --gold: #C9A24B;
+  --gold-soft: #E4C97A;
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; margin:0; }
+body{
+  background: radial-gradient(circle at 50% 35%, var(--navy) 0%, var(--navy-deep) 75%);
+  display:flex; align-items:center; justify-content:center;
+  font-family: 'IBM Plex Mono', monospace;
+  overflow: hidden;
+}
+
+.loader-screen{
+  display:flex; flex-direction:column; align-items:center;
+  text-align:center; padding: 24px;
+}
+
+.pulse-wrap{
+  position: relative;
+  width: 120px; height: 120px;
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom: 28px;
+}
+.pulse-core{
+  position:relative; z-index:2;
+  width: 64px; height:64px; border-radius:50%;
+  background: var(--navy);
+  border: 1.5px solid var(--gold);
+  color: var(--gold-soft);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 0 18px rgba(201,162,75,0.45);
+}
+.pulse-ring{
+  position:absolute; inset:0; margin:auto;
+  width: 64px; height:64px; border-radius:50%;
+  border: 1.5px solid var(--gold);
+  opacity:0;
+  animation: pulse-out 2.4s ease-out infinite;
+}
+.ring-2{ animation-delay: 0.6s; }
+.ring-3{ animation-delay: 1.2s; }
+
+@keyframes pulse-out{
+  0%{ transform: scale(1); opacity: 0.65; }
+  100%{ transform: scale(2.1); opacity: 0; }
+}
+
+.loader-name{
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 5.5vw, 2rem);
+  color: #fff;
+  margin: 0 0 6px;
+  animation: glow 1.8s ease-in-out infinite alternate;
+}
+@keyframes glow{
+  from{ text-shadow: 0 0 6px rgba(228,201,122,0.25), 0 0 2px rgba(228,201,122,0.3); }
+  to{ text-shadow: 0 0 22px rgba(228,201,122,0.75), 0 0 8px rgba(228,201,122,0.6); }
+}
+
+.loader-tag{
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  color: var(--gold-soft);
+  font-weight: 600;
+  margin: 0 0 30px;
+}
+
+.loader-percent{
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--gold-soft);
+  margin-bottom: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.loader-track{
+  width: 220px;
+  max-width: 60vw;
+  height: 5px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.12);
+  overflow:hidden;
+}
+.loader-fill{
+  height:100%;
+  width: 1%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+  border-radius: 4px;
+  transition: width 0.12s linear;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .pulse-ring{ animation: none; opacity: 0; }
+  .loader-name{ animation: none; text-shadow: 0 0 14px rgba(228,201,122,0.5); }
+}
