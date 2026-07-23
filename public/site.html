@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mastermind Medic's Solutions — Pre-Medschool Mentorship 2026</title>
+<meta name="description" content="Free mentorship pairing 2026 first-year medics with senior students. Personal mentor, webinars, daily WhatsApp discussions, Kahoot prizes and a closing hike.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2v2M12 20v2M9 5c0 2 1.5 3 3 3s3-1 3-3M9 19c0-2 1.5-3 3-3s3 1 3 3M6 8c3 1 3 3 3 4s0 3-3 4M18 8c-3 1-3 3-3 4s0 3 3 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg>
+      </span>
+      Mastermind Medic's Solutions
+    </div>
+    <div class="tagline">FOR MEDICS, BY MEDICS</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="ecg-bg" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ecg-path" d="M0,100 L140,100 L165,40 L190,160 L215,100 L340,100 L365,70 L390,130 L415,100 L560,100 L585,20 L610,180 L635,100 L780,100 L805,60 L830,140 L855,100 L1000,100 L1025,40 L1050,160 L1075,100 L1200,100"
+        fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+
+    <div class="wrap hero-inner">
+      <p class="eyebrow">PRE-MEDSCHOOL MENTORSHIP 2026 &nbsp;·&nbsp; ONLY 200 SLOTS</p>
+      <h1>Just got admitted<br>to a medical course?</h1>
+      <p class="hero-sub">Nursing, MBChB, Pharmacy, Clinical Medicine, Dental, Lab — any of them.<br>
+      Start med school already knowing the ropes.</p>
+
+      <div class="vitals" id="vitals" aria-live="polite">
+        <div class="vitals-row">
+          <span class="vitals-label">SLOTS REMAINING</span>
+          <span class="vitals-value" id="slots-remaining">—</span>
+        </div>
+        <div class="vitals-track">
+          <div class="vitals-fill" id="slots-fill"></div>
+        </div>
+        <div class="vitals-row small">
+          <span id="slots-filled">— filled</span>
+          <span>of 200 total</span>
+        </div>
+      </div>
+
+      <a href="#register" class="btn btn-primary">Claim your spot</a>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section class="section chart" id="programme">
+    <div class="wrap">
+      <p class="eyebrow">WHAT'S IN THE PROGRAMME</p>
+      <h2>We pair every first-year with a senior who has walked the path.</h2>
+
+      <ul class="chart-list">
+        <li>
+          <span class="chart-check">✓</span>
+          <div>
+            <strong>A personal senior-student mentor</strong>
+            <p>Someone who has already survived first year, in your corner from day one.</p>
+          </div>
+        </li>
+        <li>
+          <span class="chart-check">✓</span>
+          <div>
+            <strong>Daily WhatsApp group discussions</strong>
+            <p>Ask anything, anytime — the group doesn't sleep on your questions.</p>
+          </div>
+        </li>
+        <li>
+          <span class="chart-check">✓</span>
+          <div>
+            <strong>Webinar series</strong>
+            <p>Admission, study skills, campus safety, finances, relationships, career path, going abroad &amp; more.</p>
+          </div>
+        </li>
+        <li>
+          <span class="chart-check">✓</span>
+          <div>
+            <strong>Kahoot competitions with prizes</strong>
+            <p>Learn the fun way, and win while you're at it.</p>
+          </div>
+        </li>
+        <li>
+          <span class="chart-check">✓</span>
+          <div>
+            <strong>A closing physical hike &amp; meetup</strong>
+            <p>Meet your mentor and the rest of the cohort in person.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FREE BANNER -->
+  <section class="free-banner">
+    <div class="wrap free-inner">
+      <div><span class="free-price">100% FREE</span></div>
+      <div class="free-divider"></div>
+      <div class="free-text">Open to all 2026 first-years, any course</div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION FORM -->
+  <section class="section register" id="register">
+    <div class="wrap register-inner">
+      <div class="register-copy">
+        <p class="eyebrow">TWO STEPS TO JOIN</p>
+        <h2>Register below, then join the WhatsApp community.</h2>
+        <p class="hero-sub">200 slots. First come, first served. When they're gone, they're gone.</p>
+      </div>
+
+      <form id="register-form" class="card" novalidate>
+
+        <p class="form-section-title">About you</p>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="Your email address">
+        </div>
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <span class="hint">Format: +2547XX XXX XXX</span>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+2547XX XXX XXX">
+        </div>
+
+        <fieldset class="field">
+          <legend>Is this number on WhatsApp?</legend>
+          <span class="hint">We run daily discussions on WhatsApp, so this matters.</span>
+          <label class="radio-option">
+            <input type="radio" name="whatsappSameNumber" value="yes" required checked>
+            Yes, this same number
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="whatsappSameNumber" value="no" required>
+            No, I use a different WhatsApp number
+          </label>
+        </fieldset>
+
+        <div class="field" id="whatsapp-number-field" hidden>
+          <label for="whatsappNumber">If different, enter your WhatsApp number</label>
+          <span class="hint">Leave blank if it's the same as above.</span>
+          <input type="tel" id="whatsappNumber" name="whatsappNumber" placeholder="+2547XX XXX XXX">
+        </div>
+
+        <p class="form-section-title">Your studies</p>
+
+        <div class="field">
+          <label for="university">Name of your university / college</label>
+          <input type="text" id="university" name="university" required>
+        </div>
+
+        <div class="field">
+          <label for="course">Medical course</label>
+          <select id="course" name="course" required>
+            <option value="" selected disabled>Choose</option>
+            <option>MBChB (Medicine &amp; Surgery)</option>
+            <option>Bachelor of Nursing</option>
+            <option>Bachelor of Pharmacy</option>
+            <option>Clinical Medicine</option>
+            <option>Bachelor of Dental Surgery</option>
+            <option>Medical Laboratory Science</option>
+            <option>Radiography / Imaging</option>
+            <option>Nutrition &amp; Dietetics</option>
+            <option>Public / Community Health</option>
+            <option>Physiotherapy</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field" id="other-course-field" hidden>
+          <label for="otherCourse">If "Other", specify your course</label>
+          <input type="text" id="otherCourse" name="otherCourse">
+        </div>
+
+        <div class="field">
+          <label for="countyOfOrigin">County of origin</label>
+          <span class="hint">Helps us match you and plan regional meetups.</span>
+          <input type="text" id="countyOfOrigin" name="countyOfOrigin" required>
+        </div>
+
+        <fieldset class="field">
+          <legend>Year of study</legend>
+          <label class="radio-option">
+            <input type="radio" name="yearOfStudy" value="First year (2026 intake)" required>
+            First year (2026 intake)
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="yearOfStudy" value="Awaiting placement / reporting soon" required>
+            Awaiting placement / reporting soon
+          </label>
+        </fieldset>
+
+        <div class="field">
+          <label for="highschool">Highschool</label>
+          <input type="text" id="highschool" name="highschool" required>
+        </div>
+
+        <p class="form-section-title">Help us match you well</p>
+        <p class="form-section-note">This is what makes the mentorship actually fit you.</p>
+
+        <div class="field">
+          <label for="anxiety">One thing you are anxious about as you start med school</label>
+          <span class="hint">Be honest, there are no wrong answers.</span>
+          <input type="text" id="anxiety" name="anxiety" required>
+        </div>
+
+        <fieldset class="field">
+          <legend>Preferred mentor traits</legend>
+          <span class="hint">Pick up to 3 that matter most to you.</span>
+          <label class="check-option"><input type="checkbox" name="mentorTraits" value="Same course as me"> Same course as me</label>
+          <label class="check-option"><input type="checkbox" name="mentorTraits" value="Same university as me"> Same university as me</label>
+          <label class="check-option"><input type="checkbox" name="mentorTraits" value="From my county / region"> From my county / region</label>
+          <label class="check-option"><input type="checkbox" name="mentorTraits" value="Strong academically"> Strong academically</label>
+          <label class="check-option"><input type="checkbox" name="mentorTraits" value="Good with study techniques"> Good with study techniques</label>
+          <label class="check-option"><input type="checkbox" name="mentorTraits" value="Approachable and patient"> Approachable and patient</label>
+          <label class="check-option"><input type="checkbox" name="mentorTraits" value="Active in clubs / leadership"> Active in clubs / leadership</label>
+          <label class="check-option"><input type="checkbox" name="mentorTraits" value="Balances school and social life well"> Balances school and social life well</label>
+          <label class="check-option"><input type="checkbox" name="mentorTraits" value="No preference, just match me"> No preference, just match me</label>
+          <p class="form-status" id="traits-status"></p>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Preferred mentor gender <span class="optional">(optional)</span></legend>
+          <label class="radio-option"><input type="radio" name="mentorGender" value="No preference" checked> No preference</label>
+          <label class="radio-option"><input type="radio" name="mentorGender" value="Male"> Male</label>
+          <label class="radio-option"><input type="radio" name="mentorGender" value="Female"> Female</label>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Register &amp; join WhatsApp</button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-bar">
+    <div class="wrap contact-inner">
+      <div>
+        <strong>Ask us how it works</strong>
+        <span class="contact-sub">We respond fast</span>
+      </div>
+      <a id="contact-whatsapp" class="btn btn-whatsapp" href="#" target="_blank" rel="noopener">
+        WhatsApp / Call <span id="contact-number">0743 756698</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span id="footer-copyright">&copy; 2026 Mastermind Medic's Solutions</span>
+    <span class="dot">·</span>
+    <span id="footer-number">0743 756698</span>
+    <span class="dot">·</span>
+    <span>Developed by Legendary Smiley Cymor</span>
+  </div>
+  <div class="wrap footer-sub">Your journey starts before med school</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
