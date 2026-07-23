@@ -115,6 +115,42 @@
     }
   }
 
+  async function exportCsv() {
+    const btn = document.getElementById('export-btn');
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Exporting…';
+
+    try {
+      const res = await fetch('/api/admin/entries/csv', {
+        headers: { Authorization: 'Bearer ' + getToken() }
+      });
+
+      if (res.status === 401) {
+        clearToken();
+        showLogin();
+        return;
+      }
+      if (!res.ok) throw new Error('Export failed');
+
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'registrants.csv';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error(err);
+      alert('Could not export CSV. Please try again.');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = originalText;
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
     const loginStatus = document.getElementById('login-status');
@@ -147,5 +183,8 @@
       clearToken();
       showLogin();
     });
+
+    const exportBtn = document.getElementById('export-btn');
+    if (exportBtn) exportBtn.addEventListener('click', exportCsv);
   });
 })();
