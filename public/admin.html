@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Mastermind Medic's Mentorship</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">Mastermind Medic's — Admin</div>
+    <button id="logout-btn" class="link-btn" hidden>Log out</button>
+  </div>
+</header>
+
+<main class="wrap admin-wrap">
+
+  <!-- LOGIN VIEW -->
+  <section id="login-view" class="card admin-login">
+    <h2>Admin login</h2>
+    <form id="login-form">
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required autocomplete="username">
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Log in</button>
+      <p class="form-status" id="login-status"></p>
+    </form>
+  </section>
+
+  <!-- DASHBOARD VIEW -->
+  <section id="dashboard-view" hidden>
+    <div class="admin-stats">
+      <div class="stat-card">
+        <span class="stat-label">Registered</span>
+        <span class="stat-value" id="stat-count">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Slots remaining</span>
+        <span class="stat-value" id="stat-remaining">0</span>
+      </div>
+      <a href="/api/admin/entries/csv" id="export-link" class="btn btn-primary">Export CSV</a>
+    </div>
+
+    <div class="table-wrap card">
+      <table id="entries-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>WhatsApp</th>
+            <th>University</th>
+            <th>Course</th>
+            <th>Year</th>
+            <th>County</th>
+            <th>Highschool</th>
+            <th>Anxiety</th>
+            <th>Mentor traits</th>
+            <th>Mentor gender</th>
+            <th>Registered</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="entries-body"></tbody>
+      </table>
+      <p id="empty-state" class="empty-state" hidden>No registrations yet.</p>
+    </div>
+  </section>
+
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>
