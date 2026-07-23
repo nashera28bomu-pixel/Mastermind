@@ -33,7 +33,8 @@ h2{ font-size: clamp(1.5rem, 3.6vw, 2.1rem); font-weight: 600; }
 .topbar{ background: var(--navy); color: #fff; padding: 16px 0; }
 .topbar-inner{ display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
 .brand{ display:flex; align-items:center; gap:10px; font-weight:700; font-size:1rem; }
-.brand-mark{ color: var(--gold); display:inline-flex; }
+.brand-mark{ color: var(--gold); display:inline-flex; align-items:center; }
+.brand-mark-img{ height: 30px; width:auto; display:block; }
 .tagline{ font-size: 0.72rem; letter-spacing: 0.12em; color: var(--gold-soft); font-weight:600; }
 
 /* Hero */
